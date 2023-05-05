@@ -1,82 +1,43 @@
+import Post from "./Post.js";
+
 export default function Posts() {
+    const posts = [
+        {
+            usuario_img: "./assets/meowed.svg",
+            usuario_alt: "meowed",
+            usuario_nome: "meowed",
+            conteudo_img: "./assets/gato-telefone.svg",
+            conteudo_alt:"gato-telefone",
+            curtidas_nome: "respondeai",
+            curtidas_qnt: "101.523",
+            curtidas_img: "./assets/respondeai.svg",
+            curtidas_alt: "respondeai"
+        },
+        {
+            usuario_img: "./assets/barked.svg",
+            usuario_alt: "barked",
+            usuario_nome: "barked",
+            conteudo_img: "./assets/dog.svg",
+            conteudo_alt: "dog",
+            curtidas_nome: "dorable_animals",
+            curtidas_qnt: "99.159",
+            curtidas_img: "./assets/adorable_animals.svg",
+            curtidas_alt: "adorable_animals"
+        }
+    ];
+    
     return(
         <div class="posts">
-            <div class="post">
-              <div class="topo">
-                <div class="usuario">
-                  <img src="assets/meowed.svg" alt="meowed" />
-                  meowed
-                </div>
-                <div class="acoes">
-                  <ion-icon name="ellipsis-horizontal"></ion-icon>
-                </div>
-              </div>
-
-              <div class="conteudo">
-                <img src="assets/gato-telefone.svg" alt="gato-telefone" />
-              </div>
-
-              <div class="fundo">
-                <div class="acoes">
-                  <div>
-                    <ion-icon name="heart-outline"></ion-icon>
-                    <ion-icon name="chatbubble-outline"></ion-icon>
-                    <ion-icon name="paper-plane-outline"></ion-icon>
-                  </div>
-                  <div>
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                  </div>
-                </div>
-
-                <div class="curtidas">
-                  <img src="assets/respondeai.svg" alt="respondeai" />
-                  <div class="texto">
-                    Curtido por <strong>respondeai</strong> e{" "}
-                    <strong>outras 101.523 pessoas</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="post">
-              <div class="topo">
-                <div class="usuario">
-                  <img src="assets/barked.svg" alt="barked" />
-                  barked
-                </div>
-                <div class="acoes">
-                  <ion-icon name="ellipsis-horizontal"></ion-icon>
-                </div>
-              </div>
-
-              <div class="conteudo">
-                <img src="assets/dog.svg" alt="dog" />
-              </div>
-
-              <div class="fundo">
-                <div class="acoes">
-                  <div>
-                    <ion-icon name="heart-outline"></ion-icon>
-                    <ion-icon name="chatbubble-outline"></ion-icon>
-                    <ion-icon name="paper-plane-outline"></ion-icon>
-                  </div>
-                  <div>
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                  </div>
-                </div>
-
-                <div class="curtidas">
-                  <img
-                    src="assets/adorable_animals.svg"
-                    alt="adorable_animals"
-                  />
-                  <div class="texto">
-                    Curtido por <strong>adorable_animals</strong> e{" "}
-                    <strong>outras 99.159 pessoas</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            {posts.map(adress => <Post 
+            usuario_img = {adress.usuario_img}
+            usuario_alt= {adress.usuario_alt}
+            usuario_nome= {adress.usuario_nome}
+            conteudo_img= {adress.conteudo_img}
+            conteudo_alt= {adress.conteudo_alt}
+            curtidas_nome= {adress.curtidas_nome}
+            curtidas_qnt= {adress.curtidas_qnt}
+            curtidas_alt= {adress.curtidas_alt}
+            curtidas_img= {adress.curtidas_img}/>)}
+        </div>
     );
 }

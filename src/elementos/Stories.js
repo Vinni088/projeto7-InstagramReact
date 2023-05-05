@@ -1,68 +1,58 @@
+import Story from "./Story.js";
+
 export default function Stories() {
-    return(
-        <div class="stories">
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/9gag.svg" alt="9gag" />
-              </div>
-              <div class="usuario">9gag</div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/meowed.svg" alt="meowed" />
-              </div>
-              <div class="usuario">meowed</div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/barked.svg" alt="barked" />
-              </div>
-              <div class="usuario">barked</div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img
-                  src="assets/nathanwpylestrangeplanet.svg"
-                  alt="nathanwpylestrangeplanet"
-                />
-              </div>
-              <div class="usuario">nathanwpylestrangeplanet</div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/wawawicomics.svg" alt="wawawicomics" />
-              </div>
-              <div class="usuario">wawawicomics</div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/respondeai.svg" alt="respondeai" />
-              </div>
-              <div class="usuario">respondeai</div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/filomoderna.svg" alt="filomoderna" />
-              </div>
-              <div class="usuario">filomoderna</div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/memeriagourmet.svg" alt="memeriagourmet" />
-              </div>
-              <div class="usuario">memeriagourmet</div>
-            </div>
-
-            <div class="setinha">
-              <ion-icon name="chevron-forward-circle"></ion-icon>
-            </div>
-          </div>
-    );
+  const strs = [
+    {
+      img:"./assets/9gag.svg",
+      alt:"9gag",
+      nome: "9gag"
+    },
+    {
+      img:"./assets/meowed.svg",
+      alt: "meowed",
+      nome:"meowed"
+    },
+    {
+      img: "./assets/barked.svg",
+      alt: "barked",
+      nome: "barked"
+    }, 
+    {
+      img:"./assets/nathanwpylestrangeplanet.svg",
+      alt:"nathanwpylestrangeplanet",
+      nome:"nathanwpylestrangeplanet"
+    },
+    {
+      img: "./assets/wawawicomics.svg",
+      alt: "wawawicomics",
+      nome: "wawawicomics"
+    },
+    {
+      img: "./assets/respondeai.svg",
+      alt: "respondeai",
+      nome: "respondeai"
+    }, 
+    {
+      img: "assets/filomoderna.svg",
+      alt: "filomoderna", 
+      nome: "filomoderna"
+    },
+    {
+      img: "assets/memeriagourmet.svg",
+      alt: "memeriagourmet",
+      nome: "memeriagourmet"
+    }
+  ];
+  return (
+    <div class="stories">
+      {strs.map(adress => 
+        <Story 
+        img={adress.img}
+        alt={adress.alt}
+        nome={adress.nome}/>)}
+      <div class="setinha">
+        <ion-icon name="chevron-forward-circle"></ion-icon>
+      </div>
+    </div>
+  );
 }
