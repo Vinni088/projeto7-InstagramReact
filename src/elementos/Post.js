@@ -44,7 +44,7 @@ export default function Post(prop) {
       </div>
 
       <div class="conteudo">
-        <img onClick={like_perma} data-test="post-image" src={prop.conteudo_img} alt={prop.conteudo_alt} />
+        <img onDoubleClick={like_perma} data-test="post-image" src={prop.conteudo_img} alt={prop.conteudo_alt} />
       </div>
 
       <div class="fundo">
