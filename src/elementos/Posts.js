@@ -20,9 +20,20 @@ export default function Posts() {
             conteudo_img: "./assets/dog.svg",
             conteudo_alt: "dog",
             curtidas_nome: "dorable_animals",
-            curtidas_qnt: "99.159",
+            curtidas_qnt: "101.567",
             curtidas_img: "./assets/adorable_animals.svg",
             curtidas_alt: "adorable_animals"
+        },
+        {
+            usuario_img: "https://i.pinimg.com/564x/25/a0/6f/25a06f4c02f17c090454e6e48ec49973.jpg",
+            usuario_alt: "Humor_Maromba",
+            usuario_nome: "Humor_Maromba",
+            conteudo_img: "https://i.pinimg.com/564x/85/c4/a3/85c4a35e0e6152f8bc5d6e44233b53ec.jpg",
+            conteudo_alt: "100% Natural",
+            curtidas_nome: "respondeai",
+            curtidas_qnt: "136.088",
+            curtidas_img: "./assets/respondeai.svg",
+            curtidas_alt: "respondeai"
         }
     ];
     

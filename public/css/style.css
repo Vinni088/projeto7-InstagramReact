@@ -1,7 +1,17 @@
 * {
   box-sizing: border-box;
 }
+.Cor_coração {
+  color: red;
+}
 
+ion-icon {
+  transition: all 1s;
+}
+
+.usuario img {
+  border-radius: 100%;
+}
 body {
   background-color: #FAFAFA;
   margin: 54px 0 0;
