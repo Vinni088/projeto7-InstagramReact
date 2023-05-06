@@ -5,6 +5,7 @@ export default function Post(prop) {
   let [color, setColor] = useState("");
   let [bookmark, setBookmark] = useState("bookmark-outline");
   let [num_likes, setNum] = useState(prop.curtidas_qnt);
+  let [animation, setAnimation] = useState("hidden");
 
   function like(){
     if(heart === "heart-outline"){
@@ -30,6 +31,8 @@ export default function Post(prop) {
       setColor("Cor_coração");
       setNum(Number(num_likes) + 1);
     }
+    setAnimation("animado animar");
+    setTimeout(() => { setAnimation("hidden"); }, 500);
   }
   return (
     <div data-test="post" class="post">
@@ -45,6 +48,7 @@ export default function Post(prop) {
 
       <div class="conteudo">
         <img onDoubleClick={like_perma} data-test="post-image" src={prop.conteudo_img} alt={prop.conteudo_alt} />
+        <ion-icon name="heart" class={animation} onClick={like}></ion-icon>
       </div>
 
       <div class="fundo">

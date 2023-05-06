@@ -5,9 +5,30 @@
   color: red;
 }
 
-/*ion-icon {
-  transition: all 1s;
-}*/
+.conteudo {
+  position: relative;
+}
+.animado {
+  position: absolute;
+  left: 156px;
+  top: 156px;
+  color: white;
+  font-size: 300px;
+}
+
+.animar {
+  animation-name: expand;
+  animation-duration: 0.3s;
+}
+
+@keyframes expand {
+  from{scale: 0.3;}
+  to{scale: 1.0;}
+}
+
+.hidden {
+  display: none;
+}
 
 .usuario img {
   border-radius: 100%;
