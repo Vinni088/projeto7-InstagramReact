@@ -10,11 +10,11 @@ export default function Post(prop) {
     if(heart === "heart-outline"){
       setHeart("heart");
       setColor("Cor_coração");
-      setNum(Number(num_likes) + 0.001);
+      setNum(Number(num_likes) + 1);
     } else if(heart === "heart") {
       setHeart("heart-outline");
       setColor("");
-      setNum(Number(num_likes) - 0.001);
+      setNum(Number(num_likes) - 1);
     }
   }
   function mark(){
@@ -22,6 +22,13 @@ export default function Post(prop) {
       setBookmark("bookmark");
     } else if(bookmark === "bookmark") {
       setBookmark("bookmark-outline");
+    }
+  }
+  function like_perma() {
+    if(heart === "heart-outline"){
+      setHeart("heart");
+      setColor("Cor_coração");
+      setNum(Number(num_likes) + 1);
     }
   }
   return (
@@ -37,7 +44,7 @@ export default function Post(prop) {
       </div>
 
       <div class="conteudo">
-        <img data-test="post-image" src={prop.conteudo_img} alt={prop.conteudo_alt} />
+        <img onClick={like_perma} data-test="post-image" src={prop.conteudo_img} alt={prop.conteudo_alt} />
       </div>
 
       <div class="fundo">

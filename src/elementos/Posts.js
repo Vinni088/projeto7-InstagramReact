@@ -9,7 +9,7 @@ export default function Posts() {
             conteudo_img: "./assets/gato-telefone.svg",
             conteudo_alt:"gato-telefone",
             curtidas_nome: "respondeai",
-            curtidas_qnt: "101.523",
+            curtidas_qnt: "101523",
             curtidas_img: "./assets/respondeai.svg",
             curtidas_alt: "respondeai"
         },
@@ -20,7 +20,7 @@ export default function Posts() {
             conteudo_img: "./assets/dog.svg",
             conteudo_alt: "dog",
             curtidas_nome: "dorable_animals",
-            curtidas_qnt: "101.567",
+            curtidas_qnt: "101567",
             curtidas_img: "./assets/adorable_animals.svg",
             curtidas_alt: "adorable_animals"
         },
@@ -31,7 +31,7 @@ export default function Posts() {
             conteudo_img: "https://i.pinimg.com/564x/85/c4/a3/85c4a35e0e6152f8bc5d6e44233b53ec.jpg",
             conteudo_alt: "100% Natural",
             curtidas_nome: "respondeai",
-            curtidas_qnt: "136.088",
+            curtidas_qnt: "136088",
             curtidas_img: "./assets/respondeai.svg",
             curtidas_alt: "respondeai"
         }
