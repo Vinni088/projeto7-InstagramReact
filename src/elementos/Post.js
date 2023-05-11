@@ -35,24 +35,24 @@ export default function Post(prop) {
     setTimeout(() => { setAnimation("hidden"); }, 500);
   }
   return (
-    <div data-test="post" class="post">
-      <div class="topo">
-        <div class="usuario">
+    <div data-test="post" className="post">
+      <div className="topo">
+        <div className="usuario">
           <img src={prop.usuario_img} alt={prop.usuario_alt} />
           {prop.usuario_nome}
         </div>
-        <div class="acoes">
+        <div className="acoes">
           <ion-icon name="ellipsis-horizontal"></ion-icon>
         </div>
       </div>
 
-      <div class="conteudo">
+      <div className="conteudo">
         <img onDoubleClick={like_perma} data-test="post-image" src={prop.conteudo_img} alt={prop.conteudo_alt} />
         <ion-icon name="heart" class={animation} onClick={like}></ion-icon>
       </div>
 
-      <div class="fundo">
-        <div class="acoes">
+      <div className="fundo">
+        <div className="acoes">
           <div>
             <ion-icon data-test="like-post" class={color} onClick={like} name={heart}></ion-icon>
             <ion-icon name="chatbubble-outline"></ion-icon>
@@ -63,9 +63,9 @@ export default function Post(prop) {
           </div>
         </div>
 
-        <div class="curtidas">
+        <div className="curtidas">
           <img src={prop.curtidas_img} alt={prop.curtidas_alt} />
-          <div data-test="likes-number" class="texto">
+          <div data-test="likes-number" className="texto">
             Curtido por <strong>{prop.curtidas_nome}</strong> e{" "}
             <strong>outras  {num_likes} pessoas</strong>`
           </div>

@@ -38,7 +38,7 @@ export default function Posts() {
     ];
     
     return(
-        <div class="posts">
+        <div className="posts">
             {posts.map(adress => <Post 
             usuario_img = {adress.usuario_img}
             usuario_alt= {adress.usuario_alt}

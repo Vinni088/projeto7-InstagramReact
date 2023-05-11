@@ -1,9 +1,9 @@
 export default function Story(props) {
   return(
-  <div class="story">
-    <div class="imagem">
+  <div className="story">
+    <div className="imagem">
       <img src={props.img} alt={props.alt} />
     </div>
-    <div class="usuario">{props.nome}</div>
+    <div className="usuario">{props.nome}</div>
   </div>);
 }
