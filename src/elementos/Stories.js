@@ -45,8 +45,9 @@ export default function Stories() {
   ];
   return (
     <div className="stories">
-      {strs.map(adress => 
+      {strs.map((adress, indice) => 
         <Story 
+        key={indice}
         img={adress.img}
         alt={adress.alt}
         nome={adress.nome}/>)}

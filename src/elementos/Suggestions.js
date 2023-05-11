@@ -38,7 +38,15 @@ export default function Suggestions() {
               <div>Ver tudo</div>
             </div>
 
-            {sugeridos.map(adress => <Suggestion imagem={adress.imagem} alt={adress.alt} nome={adress.nome} razão={adress.nome}/>)}
+            {sugeridos.map((adress, indice) => 
+            <Suggestion 
+                key={indice}
+                imagem={adress.imagem} 
+                alt={adress.alt} 
+                nome={adress.nome} 
+                razão={adress.nome}
+            />
+            )}
 
           </div>
     );
